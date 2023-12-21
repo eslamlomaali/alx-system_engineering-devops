@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Write a Bash script that displays numbers from 1 to 100.
+
+buzz=1
+
+while [ "$buzz" -le 100 ]; do
+
+
+  if ! (( buzz % 3 )) && ! (( buzz % 5 )); then
+    echo "FizzBuzz"
+  elif ! (( buzz % 3 )); then
+    echo "Fizz"
+  elif ! (( buzz % 5 )); then
+    echo "Buzz"
+  else
+    echo "$buzz"
+  fi
+  
+  ((buzz++))
+done

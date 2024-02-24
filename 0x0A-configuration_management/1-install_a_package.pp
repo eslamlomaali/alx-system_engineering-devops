@@ -1,6 +1,10 @@
-#!/usr/bin/pup
-# install especific version of flask
-package {'flask':
+#Using Pup, install flask from pip3
+
+package { 'Flask':
   ensure   => '2.1.0',
-  provider => 'pip3'
+  provider => 'pip3',
+}
+package {'werkzeug':
+  ensure   => '2.1.1',
+  provider => 'pip3',
 }
